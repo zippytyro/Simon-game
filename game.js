@@ -75,3 +75,12 @@ function startOver() {
     gamePattern = [];
     started = false;
 }
+// cleck event for button so as to be optimized for mobile and tablet devices.
+$("button").click(function () {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+        $(".again").text("");
+    }
+});
