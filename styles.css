@@ -28,6 +28,7 @@ body {
   border: 10px solid #1b1b2f;
   border-radius: 20%;
   cursor: pointer;
+  outline: none;
 }
 
 .game-over {
@@ -60,6 +61,7 @@ body {
   color: #d7fbf6;
   font-family: 'Prompt', sans-serif;
 }
+
 @media screen and (max-width:600px){
   .container{
     width:90%;
@@ -70,5 +72,25 @@ body {
   }
   #level-title{
     font-size:2.2rem;
+  }
+}
+
+@media screen and (max-width:1000px){
+  button{
+      border: none;
+      cursor: pointer;
+      padding:0 0.5rem;
+      font-size:1.3rem;
+      font-family: 'Prompt', sans-serif;
+      background-color:#f6f578;
+      outline: none;
+  }
+  button:hover{
+    box-shadow:1px 1px 5px white;
+  }
+}
+@media (max-width:5000px) and (min-width: 1001px){
+  button{
+    display:none;
   }
 }
