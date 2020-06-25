@@ -1,3 +1,4 @@
+// jshint esversion:6
 // variables declarations
 var randomChosenColor, randomNumber, buttonColors, userChosenColor;
 var gamePattern = [];
@@ -5,7 +6,9 @@ var userClickedPattern = [];
 buttonColors = ["blue", "red", "green", "yellow"];
 
 var started = false;
-var level = 0;
+var level = 0,
+    temp = 0;
+
 // event handler for keypress
 $(document).keypress(function () {
     if (!started) {
@@ -13,7 +16,6 @@ $(document).keypress(function () {
         nextSequence();
         started = true;
         $(".again").text("");
-        document.getElementById('highestLevel').style.display = "none";
     }
 });
 // playing sound which resembles to color of the btn
@@ -38,18 +40,17 @@ function checkAnswer(currentLevel) {
         if (userClickedPattern.length === gamePattern.length) {
             setTimeout(function () {
                 nextSequence();
-            }, 1000);
-
+            }, 1080);
         }
     } else {
         playSound("wrong");
         $("body").addClass("game-over");
         setTimeout(() => {
             $("body").removeClass("game-over");
-        }, 200);
+        }, 200); // 200 milliseconds
         $("#level-title").text("You Lose!");
         $(".again").text("Press 'Start' to play again.");
-        highestLevel();
+        score();
         startOver();
     }
 }
@@ -57,6 +58,7 @@ function checkAnswer(currentLevel) {
 function nextSequence() {
     userClickedPattern = [];
     level++;
+    temp += 10;
     $("#level-title").text("Level " + level);
 
     randomNumber = Math.floor(Math.random() * 4);
@@ -75,12 +77,13 @@ function animatePress(currentColor) {
 }
 
 function startOver() {
+    temp = 0;
     level = 0;
     gamePattern = [];
     started = false;
     document.getElementById('highestLevel').style.display = "block";
 }
-// cleck event for button so as to be optimized for mobile and tablet devices.
+// click event for button so as to be optimized for mobile and tablet devices.
 $("button").click(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
@@ -90,12 +93,6 @@ $("button").click(function () {
     }
 });
 
-function highestLevel() {
-    // local storage for storing highest level
-    if (typeof (Storage) !== "undefined") {
-        localStorage.setItem("highestLevel", level);
-        $('#highestLevel').text("Highest Level: " + localStorage.getItem("highestLevel"));
-    } else {
-        console.log("ERROR: No browser support for local Storage");
-    }
+function score() {
+    $('#highestLevel').text("Your score: " + temp);
 }
