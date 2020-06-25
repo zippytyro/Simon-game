@@ -12,6 +12,20 @@
 </head>
 
 <body>
+<!--  Instruction   -->
+    <div id="card">
+    <span id="close">&times;</span>
+    <h3>
+      How to play
+    </h3>
+    <ul>
+      <li>Press 'Start' to play the game</li>
+      <li>Automatically a key is press by computer, press that key.</li>
+      <li>After you press, again a key is press by the computer you have to press the previous key and the current key.</li>
+      <li>This way a pattern is created, you have to follow the pattern to get the highest score.</li>
+    </ul>
+  </div>
+  
   <h1 id="level-title">Simon Game</h1>
   <div class="container">
     <div lass="row">
@@ -39,6 +53,11 @@
   <div class="again"></div>
   <button type="button">Start</button>
   <div id="highestLevel"></div>
+  
+    <div id="instruction">
+    <i class="far fa-lg fa-question-circle"></i>
+  </div>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="game.js"></script>
   <audio src="/sounds/blue.mp3"></audio>
