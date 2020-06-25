@@ -97,3 +97,17 @@ $("button").click(function () {
 function score() {
     $('#highestLevel').text("Your score: " + temp);
 }
+
+
+// instructions
+const info = document.getElementById("instruction");
+const close = document.getElementById("close");
+const card = document.getElementById("card");
+
+info.addEventListener("click", function () {
+    card.style.visibility = "visible";
+});
+
+close.addEventListener("click", function () {
+    card.style.visibility = "hidden";
+});
