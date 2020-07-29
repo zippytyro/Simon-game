@@ -101,7 +101,7 @@ function restartingGame() {
         $("#level-title").text("Level " + level);
         setTimeout(() => {
             nextSequence();
-        }, 500);
+        }, 750);
         started = true;
         $(".again").text("");
     }
