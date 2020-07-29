@@ -1,12 +1,12 @@
 // jshint esversion:6
 // variables declarations
 var randomChosenColor, randomNumber, buttonColors, userChosenColor;
-var gamePattern = [];
-var userClickedPattern = [];
+var gamePattern = [],
+    userClickedPattern = [];
 buttonColors = ["blue", "red", "green", "yellow"];
 
-var started = false;
-var level = 0,
+var started = false,
+    level = 0,
     temp = 0;
 
 // event handler for keypress
@@ -52,6 +52,18 @@ function checkAnswer(currentLevel) {
         $(".again").text("Press 'Start' to play again.");
         score();
         startOver();
+        setTimeout(function () {
+            restartGame();
+        }, 1100);
+    }
+}
+
+function restartGame() {
+    let restart = confirm("Restart the game?");
+    if (restart) {
+        restartingGame();
+    } else {
+        $("#level-title").text("Thanks for playing!");
     }
 }
 
@@ -84,6 +96,17 @@ function startOver() {
     document.getElementById('highestLevel').style.display = "block";
 }
 // click event for button so as to be optimized for mobile and tablet devices.
+function restartingGame() {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        setTimeout(() => {
+            nextSequence();
+        }, 500);
+        started = true;
+        $(".again").text("");
+    }
+}
+
 $("button").click(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
@@ -93,13 +116,12 @@ $("button").click(function () {
     }
 });
 
-// Displating your score.
+// Displating  score.
 function score() {
     $('#highestLevel').text("Your score: " + temp);
 }
 
-
-// instructions
+// How to play info
 const info = document.getElementById("instruction");
 const close = document.getElementById("close");
 const card = document.getElementById("card");
