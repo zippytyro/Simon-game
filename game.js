@@ -118,7 +118,7 @@ $("button").click(function () {
 
 // Displating  score.
 function score() {
-    $('#highestLevel').text("Your score: " + temp);
+    $('#highestLevel').text("Your previous score: " + temp);
 }
 
 // How to play info
