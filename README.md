@@ -8,6 +8,8 @@ git clone https://github.com/zippytyro/Simon-game.git
 
 Run the project on your browser and the game starts.
 
+![Game_image](/imag/image.jpg)
+
 ### RULES
 
 There are 4 color boxes , each on clicking will produce it's own distinct tune.
