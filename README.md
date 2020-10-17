@@ -8,7 +8,7 @@ git clone https://github.com/zippytyro/Simon-game.git
 
 Run the project on your browser and the game starts.
 
-![Game_image](/imag/image.jpg)
+![Game_image](/imag/image.JPG)
 
 ### RULES
 
