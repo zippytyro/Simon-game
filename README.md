@@ -8,7 +8,7 @@ git clone https://github.com/zippytyro/Simon-game.git
 
 Run the project on your browser and the game starts.
 
-![Game_image](https://raw.githubusercontent.com/{Rohan-GD}/{Simon-game}/{Rohan-GD}/.github/images/{image}.{jpg})
+![Game_image](https://raw.githubusercontent.com/{Rohan-GD}/{Simon-game}/{Rohan-GD}/.github/img/{image}.{jpg})
 
 ### RULES
 
