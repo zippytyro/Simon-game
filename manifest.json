@@ -1,0 +1,8 @@
+{
+    "name": "Simon Game",
+    "short_name": "Simon Game",
+    "start_url": "/",
+    "icons": [],
+    "display": "fullscreen",
+    "orientation":"portrait"
+}

@@ -6,8 +6,10 @@
   <link rel="shortcut icon" href="img/game.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
   <title>Simon Game</title>
+  <meta name="description" content="Play the classic simon game online"/>
   <meta name="viewport" content="width=device-width" initial-scale=1.0>
   <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Prompt&family=Righteous&display=swap" rel="stylesheet">
 </head>
@@ -67,6 +69,12 @@
   <audio src="/sounds/green.mp3"></audio>
   <audio src="/sounds/yellow.mp3"></audio>
   <audio src="/sounds/wrong.mp3"></audio>
+  
+  <script>
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
 </body>
 
 </html>
