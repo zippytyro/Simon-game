@@ -2,7 +2,14 @@
     "name": "Simon Game",
     "short_name": "Simon Game",
     "start_url": "/",
-    "icons": [],
+    "icons": [
+        {
+            "src": "img/game.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
     "display": "fullscreen",
     "orientation":"portrait"
 }
