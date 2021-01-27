@@ -2,6 +2,8 @@
     "name": "Simon Game",
     "short_name": "Simon Game",
     "start_url": "/",
+    "background_color": "#FFDCB5",
+    "theme_color": "#1E003D",
     "icons": [
         {
             "src": "img/game.png",
@@ -10,6 +12,6 @@
             "purpose": "maskable any"
         }
     ],
-    "display": "fullscreen",
+    "display": "standalone",
     "orientation":"portrait"
 }
