@@ -66,16 +66,32 @@ body {
 button {
   border: none;
   cursor: pointer;
-  padding: 0 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: 'Prompt', sans-serif;
-  background-color: #f6f578;
   outline: none;
+  background: #c6f50c;
+  background-image: -webkit-linear-gradient(top, #c6f50c, #a0ab0d);
+  background-image: -moz-linear-gradient(top, #c6f50c, #a0ab0d);
+  background-image: -ms-linear-gradient(top, #c6f50c, #a0ab0d);
+  background-image: -o-linear-gradient(top, #c6f50c, #a0ab0d);
+  background-image: linear-gradient(to bottom, #c6f50c, #a0ab0d);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #ffffff;
+  padding: 6px 20px 6px 20px;
+  text-decoration: none;
 }
 
 button:hover,
 button:focus {
-  box-shadow: 1px 1px 5px white;
+  background: #b4db18;
+  background-image: -webkit-linear-gradient(top, #b4db18, #c0d934);
+  background-image: -moz-linear-gradient(top, #b4db18, #c0d934);
+  background-image: -ms-linear-gradient(top, #b4db18, #c0d934);
+  background-image: -o-linear-gradient(top, #b4db18, #c0d934);
+  background-image: linear-gradient(to bottom, #b4db18, #c0d934);
+  text-decoration: none;
 }
 
 #highestLevel {
@@ -104,30 +120,33 @@ button:focus {
 #card {
   position: fixed;
   width: 60%;
-  margin:0 auto;
+  margin: 0 auto;
   left: 0;
-  right:0;
+  right: 0;
   height: 50%;
   background-color: white;
   font-family: 'Prompt', sans-serif;
-  z-index:1;
-  border-radius:10px;
+  z-index: 1;
+  border-radius: 10px;
   visibility: hidden;
-  transition:0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-#close{
-  font-size:3rem;
+
+#close {
+  font-size: 3rem;
   position: absolute;
   cursor: pointer;
-  line-height:0.5;
+  line-height: 0.5;
   right: 0.8rem;
-  top:0.4rem;
+  top: 0.4rem;
 }
-#card h3{
-  border-bottom:1.5px solid #0e0220;
+
+#card h3 {
+  border-bottom: 1.5px solid #0e0220;
 }
-#card ul{
-  text-align:left;
+
+#card ul {
+  text-align: left;
 }
 
 @media screen and (max-width:600px) {
@@ -143,8 +162,9 @@ button:focus {
   #level-title {
     font-size: 2.2rem;
   }
-  #card{
-    width:90%;
-    height:60%;
+
+  #card {
+    width: 90%;
+    height: 60%;
   }
 }
